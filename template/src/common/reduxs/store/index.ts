@@ -14,10 +14,12 @@ import EncryptedStorage from 'react-native-encrypted-storage';
 import {AuthReducer} from '~/common/reduxs/reducers/auth.reducer';
 import {RootReducerName} from '~/common/reduxs/reducers/type';
 import {CommonReducer} from '~/common/reduxs/reducers/common.reducer';
+import {ThemeReducer} from '~/common/reduxs/reducers/themeReducer';
 
 const rootReducer = combineReducers({
   [RootReducerName.auth]: AuthReducer,
   [RootReducerName.common]: CommonReducer,
+  [RootReducerName.theme]: ThemeReducer,
 });
 
 export type RootState = ReturnType<typeof rootReducer>;
